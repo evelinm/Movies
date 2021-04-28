@@ -14,7 +14,7 @@ function SearchBar () {
         <input
             type="text"
             id="header-search"
-            placeholder="Search blog posts"
+            placeholder="Movies poster"
             name="s" 
         />
         <button type="submit">Search</button>
@@ -30,9 +30,6 @@ const SearchBarContainer = styled.div`
   display:flex;
   align-items: center;
   justify-content: center;
-
   padding-top: 50px;
-  
-
 
 `
