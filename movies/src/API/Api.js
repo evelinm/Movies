@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const posterApi= axios.create({
-    baseURL: "http://img.omdbapi.com/?i=tt3896198&h=600&apikey=e9a26f17"
+    baseURL: "https://api.themoviedb.org/3/"
 });
 
 export default posterApi;
