@@ -50,20 +50,24 @@ padding-top: 30px;
 `;
 
 const MovieTitle = styled.div`
-max-width:100px;
+
+text-align:center;
+align-content:center;
+justify-center:center;
 
 `;
 
 const MoviePoster = styled.div`
-color: black;
-padding: 20px;
-
+padding: 40px;
+margin: 27px;
+background-color: black;
+color: white;
+box-shadow: 10px 5px 5px grey;
 @media (max-width: 768px) {
     flex-direction: column;
     flex-wrap:no-wrap;
     padding:50px;
-    background-color: black;
-    color: white;
+
   }
 
 
