@@ -12,6 +12,7 @@ function Body() {
     const [isLoading, setIsLoading] =useState(true);
 
     
+    const [movie, setMovie] = useState('');
     useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true);
@@ -25,7 +26,8 @@ function Body() {
       }, []);
    return (
        <div>
-       <SearchBar/>
+       <SearchBar movieHandler={setMovie}/>
+       <div>{movie}</div>
         {isLoading ?  <p> Loading...</p> : <MoviePosterContainer>
         {poster.results.map(item => (
             <MoviePoster key={item.id}>
