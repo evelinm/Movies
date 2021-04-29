@@ -26,17 +26,35 @@ function Body() {
    return (
        <div>
        <SearchBar/>
-        {isLoading ?  <p> Loading...</p> : <ul>
+        {isLoading ?  <p> Loading...</p> : <MoviePosterContainer>
         {poster.results.map(item => (
-            <li key={item.id}>
+            <MoviePoster key={item.id}>
             <p>{item.title}</p>
             <img src={`${imageUrl}${item.poster_path}`} alt="image"/>
-            </li>
+            </MoviePoster>
             
         ))}
-        </ul>}
+       </MoviePosterContainer>}
 
        </div> 
    ) 
 }
 export default Body;
+
+const MoviePosterContainer = styled.div`
+display:flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+padding-top: 30px;
+
+
+`;
+
+const MoviePoster = styled.div`
+color: white;
+background-color: black;
+padding: 20px;
+
+
+`;
