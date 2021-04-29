@@ -29,7 +29,7 @@ function Body() {
         {isLoading ?  <p> Loading...</p> : <MoviePosterContainer>
         {poster.results.map(item => (
             <MoviePoster key={item.id}>
-            <p>{item.title}</p>
+            <MovieTitle>{item.title}</MovieTitle>
             <img src={`${imageUrl}${item.poster_path}`} alt="image"/>
             </MoviePoster>
             
@@ -51,10 +51,21 @@ padding-top: 30px;
 
 `;
 
+const MovieTitle = styled.div`
+overflow-wrap: break-word;
+
+`;
+
 const MoviePoster = styled.div`
 color: white;
 background-color: black;
 padding: 20px;
+
+@media (max-width: 768px) {
+    flex-direction: column;
+    flex-wrap:no-wrap;
+    padding:50px;
+  }
 
 
 `;
