@@ -31,8 +31,7 @@ function Body() {
             <MoviePoster key={item.id}>
             <MovieTitle>{item.title}</MovieTitle>
             <img src={`${imageUrl}${item.poster_path}`} alt="image"/>
-            </MoviePoster>
-            
+            </MoviePoster>  
         ))}
        </MoviePosterContainer>}
 
@@ -48,23 +47,23 @@ justify-content: center;
 flex-wrap: wrap;
 padding-top: 30px;
 
-
 `;
 
 const MovieTitle = styled.div`
-overflow-wrap: break-word;
+max-width:100px;
 
 `;
 
 const MoviePoster = styled.div`
-color: white;
-background-color: black;
+color: black;
 padding: 20px;
 
 @media (max-width: 768px) {
     flex-direction: column;
     flex-wrap:no-wrap;
     padding:50px;
+    background-color: black;
+    color: white;
   }
 
 
